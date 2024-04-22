@@ -1,0 +1,233 @@
+/* ცვლადები */
+:root{
+    /* ფერები */
+    --c-white:hsl(0,0%,100%);
+    --c-black:hsl(0,0%,0%);
+    --c-green:hsl(145, 63%, 49%);
+    --c-pink:hsl(337, 91%, 45%);
+    --c-hover:hsl(0,0%,70%);
+    --c-grey:hsl(0,0%,95%);
+    --c-bold-grey:hsl(0,0%,50%);
+    --c-blue:hsl(203, 92%, 19%);
+    --c-red:hsl(0, 100%, 50%);
+    /* ფერები დამთავრდა */
+    /* ფონტის ზომა */
+    --fs-small:.8rem;
+    --fs-more:1.3rem;
+    --fs-alot:2.2rem;
+    --fs-normal:1.1rem;
+    --fs-big:3rem;
+    /* ფონტის ზომის დასასრული */
+    /* გარე სივრცე */
+    --mrgn-mrlittle:15px;
+   --mrgn-little:30px;
+   --mrgn-average:60px;
+   --mrgn-more:100px;
+   /* გარე სივრცის დასასრული */
+    /* შიდა სივრცე */
+    --pdng-little:20px;
+    --pdng-big:135px;
+    /* შიდა სივრცის დასასრული */
+/* ცვლადების დასასრული */
+}
+/* საერთო */
+*{
+    box-sizing: border-box;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+body, h1, h2, h3, h4,h5, ul, li, p, i{
+    margin: 0;
+    padding: 0;
+}
+body{
+    animation-name: appear;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+html{
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family:'BPG Nino';
+    src: url(../font/bpg_nino_mtavruli_bold.ttf);
+}
+@font-face {
+        font-family:'BPG mrgvlovani' ;
+        src: url(../font/bpg_mrgvlovani_caps_2010.ttf);
+}
+@font-face {
+    font-family: 'alk-rex-bold';
+    src: url(../font/alk-rex-bold.otf);
+}
+/* საერთოს დასასრული */
+.d-header{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.d-header i{
+    display: flex;
+    margin-left: 100px;
+    font-size: var(--fs-alot);
+    text-align: center;
+    margin-top: 15px;
+    color: var(--c-blue);
+    border-radius: 50%;
+    padding: 8px;
+    animation-name: dropEffect;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border: none;
+    outline: 1px solid hsla(0, 100%, 50%, .5);
+    outline-offset: 0.3rem;
+    transition: 1s;
+}
+.title{
+    text-align: center;
+    color: var(--c-black);
+    font-family: 'BPG mrgvlovani';
+    font-style: italic;
+    margin-top: var(--mrgn-mrlittle);
+    color: var(--c-pink);
+}
+.drink-wrapper{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    margin-top: var(--mrgn-average);
+    flex-wrap: wrap;
+
+}
+.drink-wrapper img{
+    width: 90%;
+    display:flex;
+    justify-content:center ;
+    object-fit: cover;
+    height: 300px;
+    width: 300px;
+    
+}
+.drink-wrapper del{
+    color: var(--c-black);
+    font-family: 'BPG Nino';
+}
+.drink-wrapper ins{
+    color: var(--c-red);
+    font-family: 'BPG Nino';
+   text-align: center;
+}
+.price{
+    display: inline-block;
+    background-color: var(--c-hover);
+    padding: 10px 25px;
+    border-radius: 25px;
+    margin-top: 10px;
+    font-size: var(--fs-normal);
+}
+.price a{
+    color: var(--c-black);
+    font-family: 'alk-rex-bold';
+}
+.price a:hover{
+    color: var(--c-red);
+    transition: .5s;
+}
+.price p{
+    padding-top: 5px;
+}
+.drink-wrapper span{
+    font-size: 13px;
+    font-family: 'alk-rex-bold';
+}
+.tea-drink{
+    text-align: center;
+    margin-top: var(--mrgn-average);
+    font-size: var(--fs-more);
+    font-family: 'BPG mrgvlovani';
+    font-style: italic;
+    color: var(--c-pink);
+}
+.tea-wrapper{
+    display: flex;
+    justify-content: center; 
+    text-align: center;
+     gap: 20px; 
+    margin-top: var(--mrgn-average);
+    flex-wrap: wrap;
+}
+.tea-wrapper img{
+    width: 90%;
+    display:flex;
+    justify-content:center ;
+    object-fit: cover;
+    height: 300px;
+    width: 300px;
+}
+.tea-wrapper del{
+    color: var(--c-black);
+    font-family: 'BPG Nino';
+}
+.tea-wrapper ins{
+    color: var(--c-red);
+    font-family: 'BPG Nino';
+   text-align: center;
+}
+.price2{
+    display: inline-block;
+    background-color: var(--c-hover);
+    padding: 10px 25px;
+    border-radius: 25px;
+    margin-top: 10px;
+    font-size: var(--fs-normal);
+}
+.price2 a{
+    color: var(--c-black);
+    font-family: 'alk-rex-bold';
+}
+.price2 a:hover{
+    color: var(--c-red);
+    transition: .5s;
+}
+.price2 p{
+    padding-top: 5px;
+}
+.tea-wrapper span{
+    font-size: 13px;
+    font-family: 'alk-rex-bold';
+}
+/* მობილური */
+@media screen and (min-width:500px) {
+    .drink-wrapper .energy-drink .natural-wrapper .alco-wrapper{
+        width: 100%;
+    }
+}
+/* პლანშეტი */
+@media screen and (min-width:768px) {
+    .drink-wrapper .energy-drink .natural-wrapper .alco-wrapper{
+        width: 50%;
+    }
+}
+@keyframes appear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes dropEffect {
+    from{
+        outline: 1px solid hsla(0, 100%, 50%, .5);
+        outline-offset: 0.3rem;
+    }
+    to{
+        outline-color: hsla(0, 100%, 50%, 0);
+        outline-width: 10px;
+    }
+}
